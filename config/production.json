@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://nick:quadro83@cluster0-iergh.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "sobaka"
+}
