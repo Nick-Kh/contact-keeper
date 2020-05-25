@@ -31,7 +31,7 @@ const ContactState = (props) => {
       const res = await axios.get('http://localhost:5000/api/contacts');
       dispatch({ type: GET_CONTACTS, payload: res.data });
     } catch (error) {
-      dispatch({ type: CONTACT_ERROR, payload: error.response.msg });
+      dispatch({ type: CONTACT_ERROR, payload: error.response });
     }
   };
 
@@ -54,7 +54,7 @@ const ContactState = (props) => {
       );
       dispatch({ type: ADD_CONTACT, payload: res.data });
     } catch (error) {
-      dispatch({ type: CONTACT_ERROR, payload: error.response.msg });
+      dispatch({ type: CONTACT_ERROR, payload: error.response });
     }
   };
 
@@ -64,7 +64,7 @@ const ContactState = (props) => {
       await axios.delete(`http://localhost:5000/api/contacts/${id}`);
       dispatch({ type: DELETE_CONTACT, payload: id });
     } catch (error) {
-      dispatch({ type: CONTACT_ERROR, payload: error.response.msg });
+      dispatch({ type: CONTACT_ERROR, payload: error.response });
     }
   };
 
@@ -93,7 +93,7 @@ const ContactState = (props) => {
       );
       dispatch({ type: UPDATE_CONTACT, payload: res.data });
     } catch (error) {
-      dispatch({ type: CONTACT_ERROR, payload: error.response.msg });
+      dispatch({ type: CONTACT_ERROR, payload: error.response });
     }
   };
 
